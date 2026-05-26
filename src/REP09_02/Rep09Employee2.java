@@ -1,3 +1,5 @@
+package REP09_02;
+
 import java.util.Scanner;
 
 class Person {
@@ -19,7 +21,7 @@ class Employee extends Person {
     }
 }
 
-public class Rep09employee1 {
+public class Rep09Employee2 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         Employee[] employees = new Employee[10];
@@ -39,7 +41,7 @@ public class Rep09employee1 {
             System.out.print("Enter salary:");
             int salary = Integer.parseInt(s.nextLine());
 
-            employees[i] = new Employee(name,ssn,salary);
+            employees[i] = new Employee(name, ssn, salary);
         }
     }
 }
