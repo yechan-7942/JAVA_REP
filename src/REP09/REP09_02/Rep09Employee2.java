@@ -1,4 +1,4 @@
-package REP09_02;
+package REP09.REP09_02;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package REP09_03;
+package REP09.REP09_03;
 import java.util.Scanner;
 
 class Person {
