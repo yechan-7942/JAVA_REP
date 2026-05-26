@@ -1,3 +1,5 @@
+package REP09_01;
+
 import java.util.Scanner;
 
 class Person {
