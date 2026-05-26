@@ -11,14 +11,26 @@ class Person {
 
 class Employee extends Person {
     String ssn;
-    int salary;
+    double salary;
     Employee() {
     }
 
-    Employee(String name, String ssn, int salary) {
+    Employee(String name, String ssn, double salary) {
         super(name);
         this.ssn = ssn;
         this.salary = salary;
+    }
+
+    //output메서드 추가!
+    void output(double averageSal) {
+        System.out.println("Name: " + name);
+        System.out.println("SSN: " + ssn);
+        System.out.println("Salary: " + salary);
+        if (salary >= averageSal) {
+            System.out.println("Salary above average");
+        } else {
+            System.out.println("Salary below average");
+        }
     }
 }
 
@@ -37,7 +49,7 @@ public class Rep09Employee3 {
         int count = Integer.parseInt(s.nextLine());
 
         for (int i = 0; i < count; i++) {
-            System.out.println('\n');
+            System.out.println("");
             System.out.println("Entering data for employee " + (i + 1));
 
             System.out.print("Enter name: ");
@@ -55,7 +67,7 @@ public class Rep09Employee3 {
                     System.out.println("Please enter agin.");
                 }
             }
-            int salary = 0;
+            double  salary = 0;
             while (true) {
                 System.out.print("Enter salary: ");
                 try {
@@ -66,8 +78,21 @@ public class Rep09Employee3 {
                     System.out.println("Please enter again.");
                 }
             }
-
             employees[i] = new Employee(name, ssn, salary);
         }
+
+        double total = 0;
+        for (int i = 0; i <count; i++) {
+            total += employees[i].salary;
+        }
+        double average = total / count;
+
+        System.out.println("===== Employee List and Salary Evaluation ====");
+        for(int i = 0; i < count; i++) {
+            System.out.println("");
+            System.out.println("Employee  #" + (i + 1));
+            employees[i].output(average);
+        }
+
     }
 }
