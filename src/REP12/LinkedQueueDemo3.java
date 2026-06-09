@@ -9,8 +9,7 @@ package REP12;
 
 public class LinkedQueueDemo3 {
     public static void main(String[] args) {
-        REP12LinkedQueue3<String> q = new REP12LinkedQueue3<String>();
-        q.addToQueue("One");
+        REP12LinkedQueue3<String> q = new REP12LinkedQueue3<>();        q.addToQueue("One");
         q.addToQueue("Two");
         q.addToQueue("Three");
         System.out.println("Queue has " + q.length() +
